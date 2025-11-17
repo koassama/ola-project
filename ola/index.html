@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         .logo-container {
             width: 50px;
             height: 50px;
@@ -17,11 +19,13 @@
             align-items: center;
             justify-content: center;
         }
+
         .logo-img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
         }
+
         /* Sticky sidebar */
         @media (min-width: 1024px) {
             #sidebar {
@@ -31,96 +35,98 @@
                 overflow-y: auto;
             }
         }
+
         /* Back to top button styles */
         #backToTop {
             transition: opacity 0.3s, visibility 0.3s;
         }
+
         #backToTop.hidden {
             opacity: 0;
             visibility: hidden;
         }
-        
+
         /* تحسينات الجوال */
         @media (max-width: 768px) {
             .logo-container {
                 width: 40px;
                 height: 40px;
             }
-            
+
             /* تصغير حجم النصوص في الجوال */
             h1 {
                 font-size: 1.25rem !important;
             }
-            
+
             h2 {
                 font-size: 1.5rem !important;
             }
-            
+
             h3 {
                 font-size: 1.125rem !important;
             }
-            
+
             /* تحسين الجدول في الجوال */
             table {
                 font-size: 0.875rem;
             }
-            
+
             td {
                 padding: 0.5rem !important;
             }
-            
+
             /* تصغير الصور في الجوال */
             .goal-image {
                 max-height: 300px !important;
             }
-            
+
             /* تحسين زر العودة للأعلى */
             #backToTop {
                 bottom: 1rem !important;
                 left: 1rem !important;
                 padding: 0.75rem !important;
             }
-            
+
             /* تحسين النافذة المنبثقة للصور */
             #imageModal img {
                 max-width: 95vw !important;
                 max-height: 80vh !important;
             }
         }
-        
+
         @media (max-width: 640px) {
+
             /* تصغير إضافي للشاشات الصغيرة جداً */
             .logo-container {
                 width: 35px;
                 height: 35px;
             }
-            
+
             h1 {
                 font-size: 1rem !important;
             }
-            
+
             table {
                 font-size: 0.75rem;
             }
         }
     </style>
 </head>
+
 <body class="min-h-screen bg-teal">
     <!-- Header -->
     <header style="background-color: #07a869" class=" text-white p-6 shadow-lg">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <button onclick="toggleMenu()" class="lg:hidden p-2 hover:bg-black rounded">
                 <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
                 <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            
+
             <div class="flex items-center gap-4">
-                <!-- Left Logo - Replace src with your image URL -->
-                <div class="flex items-center gap-4">
                 <!-- Left Logo - Replace src with your image URL -->
                 <div
                     class="logo-container bg-white bg-opacity-100 rounded-lg w-40 h-60 flex items-center justify-center">
@@ -132,38 +138,47 @@
                     <p class="text-xl text-blue-200">Ministry of Education</p>
                 </div>
             </div>
-            
+
+
         </div>
     </header>
 
     <div class="flex max-w-7xl mx-auto">
         <!-- Sidebar Navigation -->
-        <aside style="background-color: #07a869" id="sidebar" class="translate-x-full lg:translate-x-0 fixed lg:relative right-0 top-0 h-full lg:h-auto w-80 shadow-2xl lg:shadow-lg transition-transform duration-300 z-50 lg:z-auto mt-0 lg:mt-8 lg:ml-8 lg:rounded-lg overflow-hidden">
+        <aside style="background-color: #07a869" id="sidebar"
+            class="translate-x-full lg:translate-x-0 fixed lg:relative right-0 top-0 h-full lg:h-auto w-80 shadow-2xl lg:shadow-lg transition-transform duration-300 z-50 lg:z-auto mt-0 lg:mt-8 lg:ml-8 lg:rounded-lg overflow-hidden">
             <div class="lg:hidden p-4 bg-green-200 text-white flex justify-between items-center">
                 <h2 class="text-xl font-bold">القائمة</h2>
                 <button onclick="toggleMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
-            
+
             <nav class="py-4">
-                <button onclick="showPage('home')" class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all bg-purple-50 text-white border-r-4 border-purple-700">
+                <button onclick="showPage('home')"
+                    class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all bg-purple-50 text-white border-r-4 border-purple-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                     <span class="text-lg font-medium">الصفحة الرئيسية</span>
                 </button>
-                <button onclick="showPage('goals')" class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all  text-white hover:bg-black">
+                <button onclick="showPage('goals')"
+                    class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all  text-white hover:bg-black">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="text-lg font-medium">الأهداف</span>
                 </button>
-                <button onclick="showPage('skills')" class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all  text-white hover:bg-black">
+                <button onclick="showPage('skills')"
+                    class="nav-btn flex items-center gap-3 w-full px-6 py-4 text-right transition-all  text-white hover:bg-black">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                     </svg>
                     <span class="text-lg font-medium">الجدارات</span>
                 </button>
@@ -176,66 +191,89 @@
                 <!-- Home Page -->
                 <div id="homePage" class="page-content">
                     <h2 class="text-3xl font-bold text-white mb-8 text-center">السيرة الذاتية</h2>
-                    
+
                     <!-- CV Card with Floral Border -->
-                    <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl p-12 border-4 border-blue-200 relative overflow-hidden">
-                        
+                    <div
+                        class="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl p-12 border-4 border-blue-200 relative overflow-hidden">
+
                         <!-- Decorative Floral Corners -->
                         <div class="absolute top-2 left-2 text-6xl opacity-30">🌸</div>
                         <div class="absolute top-2 right-2 text-6xl opacity-30">🌼</div>
                         <div class="absolute bottom-2 left-2 text-6xl opacity-30">🌺</div>
                         <div class="absolute bottom-2 right-2 text-6xl opacity-30">🌻</div>
-                        
+
                         <!-- CV Content -->
                         <div class="relative z-10">
                             <table class="w-full border-collapse">
                                 <tbody>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">الاسم</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">أحمد محمد العلي</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            الاسم</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">أحمد محمد العلي
+                                        </td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">المؤهل العلمي</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">بكالوريوس تربية</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            المؤهل العلمي</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">بكالوريوس تربية
+                                        </td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">تاريخه</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            تاريخه</td>
                                         <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">2015م</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">مصدره</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">جامعة الملك سعود</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            مصدره</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">جامعة الملك سعود
+                                        </td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">رقم الوظيفة</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            رقم الوظيفة</td>
                                         <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">123456</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">تاريخ التعيين</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            تاريخ التعيين</td>
                                         <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">1442/05/15هـ</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">السجل المدني</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            السجل المدني</td>
                                         <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">1234567890</td>
                                     </tr>
                                     <tr>
-                                        <td class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">التدرج الوظيفي</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">معلم - معلم ممارس</td>
+                                        <td
+                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
+                                            التدرج الوظيفي</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">معلم - معلم ممارس
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-              </div>
+                </div>
 
                 <!-- Goals Page -->
                 <div id="goalsPage" class="page-content hidden">
                     <div class="max-w-5xl mx-auto">
-                        
+
                         <!-- Part 1: Title Section -->
                         <div style="background-color: #3078a6" class=" rounded-t-3xl p-8 text-center shadow-lg">
-                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الاول: اعداد عدد(3) استمارة تسليم للمقررات الدراسية للمرحلة الابتدائية بمعدل (1) استمارة لكل فصل دراسي للعام الحالي 2025</h3>
-                            
+                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الاول: اعداد عدد(3) استمارة تسليم
+                                للمقررات الدراسية للمرحلة الابتدائية بمعدل (1) استمارة لكل فصل دراسي للعام الحالي 2025
+                            </h3>
+
                         </div>
                         <!-- Part 3: Photo Section -->
                         <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-b-3xl p-10 shadow-lg">
@@ -243,13 +281,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الاول.jpg" 
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الاول.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 1-4</p>
                                     </div>
                                 </div>
@@ -259,9 +297,10 @@
                         <br>
 
                         <!--الهدف الثاني-->
-                        <div  style="background-color: #3078a6" class=" rounded-t-3xl p-8 text-center shadow-lg">
-                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الثاني: توثيق عدد (3) تقرير للبرامج والدورات التي اقيمت في مركز التعليم بمعدل(1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
-                            
+                        <div style="background-color: #3078a6" class=" rounded-t-3xl p-8 text-center shadow-lg">
+                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الثاني: توثيق عدد (3) تقرير للبرامج
+                                والدورات التي اقيمت في مركز التعليم بمعدل(1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
+
                         </div>
                         <!-- شاهد 1 -->
                         <div class="bg-gradient-to-br from-purple-50 to-blue-50  p-10 shadow-lg">
@@ -269,13 +308,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الثاني/شاهد 1.jpg" 
-                                         alt="صورة الهدف"
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الثاني/شاهد 1.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 1</p>
                                     </div>
                                 </div>
@@ -286,13 +325,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الثاني/شاهد 2.jpg" 
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الثاني/شاهد 2.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -303,13 +342,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الثاني/شاهد 3.jpg" 
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الثاني/شاهد 3.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 3 </p>
                                     </div>
                                 </div>
@@ -320,13 +359,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الثاني/شاهد 4.jpg" 
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الثاني/شاهد 4.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 4 </p>
                                     </div>
                                 </div>
@@ -337,8 +376,9 @@
 
                         <!--الهدف الثالث-->
                         <div style="background-color: #3078a6" class="rounded-t-3xl p-8 text-center shadow-lg">
-                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الثالث: اعداد عدد (3) تقرير شهري لغياب الطلاب والطالبات بمعدل (1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
-                            
+                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الثالث: اعداد عدد (3) تقرير شهري لغياب
+                                الطلاب والطالبات بمعدل (1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
+
                         </div>
                         <!-- شاهد 1 -->
                         <div class="bg-gradient-to-br from-purple-50 to-blue-50  p-10 shadow-lg">
@@ -346,13 +386,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="شواهد الهدف الثالث/شاهد 1.jpg"
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="شواهد الهدف الثالث/شاهد 1.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 1</p>
                                     </div>
                                 </div>
@@ -363,13 +403,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="شواهد الهدف الثالث/شاهد 2.jpg" 
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="شواهد الهدف الثالث/شاهد 2.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -380,13 +420,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="شواهد الهدف الثالث/شاهد 3.jpg"
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
+                                    <img src="شواهد الهدف الثالث/شاهد 3.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 3 </p>
                                     </div>
                                 </div>
@@ -397,13 +437,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="شواهد الهدف الثالث/شاهد 4.jpg"
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="شواهد الهدف الثالث/شاهد 4.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 4 </p>
                                     </div>
                                 </div>
@@ -412,10 +452,11 @@
 
                         <br>
 
-                         <!--الهدف الرابع-->
+                        <!--الهدف الرابع-->
                         <div style="background-color: #3078a6" class="rounded-t-3xl p-8 text-center shadow-lg">
-                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الرابع: اعداد عدد (3) تقرير لتأخير واستئذان الطلاب و الطالبات بمعدل (1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
-                            
+                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الرابع: اعداد عدد (3) تقرير لتأخير
+                                واستئذان الطلاب و الطالبات بمعدل (1) تقرير لكل فصل دراسي للعام الحالي 2025 </h3>
+
                         </div>
                         <!-- شاهد 1 -->
                         <div class="bg-gradient-to-br from-purple-50 to-blue-50  p-10 shadow-lg">
@@ -423,13 +464,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الرابع/شاهد 1.jpg"
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الرابع/شاهد 1.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 1</p>
                                     </div>
                                 </div>
@@ -440,13 +481,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الرابع/شاهد 2.jpg"
-                                         alt="صورة الهدف"
-                                         onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الرابع/شاهد 2.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -454,11 +495,12 @@
                         </div>
 
                         <br>
-                    
+
                         <!--الهدف الخامس-->
                         <div style="background-color: #3078a6" class="rounded-t-3xl p-8 text-center shadow-lg">
-                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الخامس: تنظيم عدد (2) سجل زيارة الفصول لمركز مصادر التعلم بمعدل (1) سجل لكل فصل دراسي للعام الحالي 2025 </h3>
-                            
+                            <h3 class="text-2xl font-bold text-white mb-2">الهدف الخامس: تنظيم عدد (2) سجل زيارة الفصول
+                                لمركز مصادر التعلم بمعدل (1) سجل لكل فصل دراسي للعام الحالي 2025 </h3>
+
                         </div>
                         <!-- شاهد 1 -->
                         <div class="bg-gradient-to-br from-purple-50 to-blue-50  p-10 shadow-lg">
@@ -466,13 +508,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الخامس/شاهد 4.jpg"
-                                         alt="صورة الهدف" 
-                                          onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الخامس/شاهد 4.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4  text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 1</p>
                                     </div>
                                 </div>
@@ -483,13 +525,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الخامس/شاهد 1.jpg"
-                                         alt="صورة الهدف"
-                                         onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الخامس/شاهد 1.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -500,13 +542,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الخامس/شاهد 2.jpg"
-                                         alt="صورة الهدف"
-                                         onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الخامس/شاهد 2.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -517,13 +559,13 @@
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <!-- Replace src with your image path -->
-                                    <img src="./شواهد الهدف الخامس/شاهد 3.jpg"
-                                         alt="صورة الهدف"
-                                         onclick="openImageModal(this.src)"
-                                         class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
-                                         style="max-height: 500px; width: auto;"
-                                         onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
-                                    <div style="background-color: #7a80ff" class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
+                                    <img src="./شواهد الهدف الخامس/شاهد 3.jpg" alt="صورة الهدف"
+                                        onclick="openImageModal(this.src)"
+                                        class="cursor-pointer rounded-lg shadow-md hover:opacity-80 transition rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white"
+                                        style="max-height: 500px; width: auto;"
+                                        onerror="this.src='https://via.placeholder.com/600x400/9333ea/ffffff?text=%D8%B6%D8%B9+%D8%B5%D9%88%D8%B1%D8%AA%D9%83+%D9%87%D9%86%D8%A7'">
+                                    <div style="background-color: #7a80ff"
+                                        class="absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-lg shadow-lg">
                                         <p class="font-bold">شاهد 2 </p>
                                     </div>
                                 </div>
@@ -538,27 +580,33 @@
                 <div id="skillsPage" class="page-content hidden">
                     <h2 class="text-3xl font-bold text-teal-900 mb-6">المهارات</h2>
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">التفكير النقدي</h3>
                             <p class="text-gray-700">تطوير القدرة على التحليل والتقييم</p>
                         </div>
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">الإبداع والابتكار</h3>
                             <p class="text-gray-700">تشجيع الأفكار الجديدة والحلول المبتكرة</p>
                         </div>
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">التواصل الفعال</h3>
                             <p class="text-gray-700">مهارات الحوار والعرض والكتابة</p>
                         </div>
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">العمل الجماعي</h3>
                             <p class="text-gray-700">التعاون والتنسيق مع الآخرين</p>
                         </div>
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">القيادة</h3>
                             <p class="text-gray-700">تنمية مهارات القيادة والمسؤولية</p>
                         </div>
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+                        <div
+                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
                             <h3 class="text-xl font-bold text-teal-900 mb-3">التفكير الحسابي</h3>
                             <p class="text-gray-700">حل المشكلات باستخدام التقنية</p>
                         </div>
@@ -572,31 +620,30 @@
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden" onclick="toggleMenu()"></div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" style="background-color: #c1b489" class="hidden fixed bottom-8 left-8  p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all z-50 hover:scale-110" onclick="scrollToTop()">
+    <button id="backToTop" style="background-color: #c1b489"
+        class="hidden fixed bottom-8 left-8  p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all z-50 hover:scale-110"
+        onclick="scrollToTop()">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </button>
 
 
-    <div id="imageModal"
-     class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 
             flex justify-center items-center p-4">
 
-    <div class="relative">
-        <!-- زر الإغلاق -->
-        <button onclick="closeImageModal()" 
-                class="absolute -top-3 -right-3 bg-white text-black 
+        <div class="relative">
+            <!-- زر الإغلاق -->
+            <button onclick="closeImageModal()" class="absolute -top-3 -right-3 bg-white text-black 
                        rounded-full w-8 h-8 flex items-center justify-center 
                        shadow-lg font-bold">
-            ✕
-        </button>
+                ✕
+            </button>
 
-        <!-- الصورة المكبرة -->
-        <img id="modalImg" 
-             class="max-w-[500px] max-height-[500px] rounded-xl shadow-2xl">
+            <!-- الصورة المكبرة -->
+            <img id="modalImg" class="max-w-[500px] max-height-[500px] rounded-xl shadow-2xl">
+        </div>
     </div>
-</div>
 
 
 
@@ -606,7 +653,7 @@
             const overlay = document.getElementById('overlay');
             const menuIcon = document.getElementById('menuIcon');
             const closeIcon = document.getElementById('closeIcon');
-            
+
             sidebar.classList.toggle('translate-x-full');
             overlay.classList.toggle('hidden');
             menuIcon.classList.toggle('hidden');
@@ -618,24 +665,24 @@
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.add('hidden');
             });
-            
+
             // Show selected page
             document.getElementById(pageName + 'Page').classList.remove('hidden');
-            
+
             // Update navigation buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('bg-purple-50', 'text-white', 'border-r-4', 'border-purple-700');
                 btn.classList.add('text-white', 'hover:bg-black');
             });
-            
+
             event.target.closest('.nav-btn').classList.add('bg-purple-50', 'text-white', 'border-r-4', 'border-purple-700');
             event.target.closest('.nav-btn').classList.remove('text-white', 'hover:bg-black');
-            
+
             // Close mobile menu
             if (window.innerWidth < 1024) {
                 toggleMenu();
             }
-            
+
             // Scroll to top when changing pages
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -646,7 +693,7 @@
         }
 
         // Show/hide back to top button based on scroll position
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTopBtn = document.getElementById('backToTop');
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.remove('hidden');
@@ -657,35 +704,31 @@
 
 
         function openImageModal(src) {
-    document.getElementById("modalImg").src = src;
-    document.getElementById("imageModal").classList.remove("hidden");
-}
+            document.getElementById("modalImg").src = src;
+            document.getElementById("imageModal").classList.remove("hidden");
+        }
 
-// إغلاق النافذة
-function closeImageModal() {
-    document.getElementById("imageModal").classList.add("hidden");
-}
+        // إغلاق النافذة
+        function closeImageModal() {
+            document.getElementById("imageModal").classList.add("hidden");
+        }
 
-// اغلاق عند الضغط خارج الصورة
-document.getElementById("imageModal").addEventListener("click", function(e) {
-    if (e.target.id === "imageModal") {
-        closeImageModal();
-    }
-});
+        // اغلاق عند الضغط خارج الصورة
+        document.getElementById("imageModal").addEventListener("click", function (e) {
+            if (e.target.id === "imageModal") {
+                closeImageModal();
+            }
+        });
 
-// اغلاق بالزر ESC
-document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-        closeImageModal();
-    }
-});
+        // اغلاق بالزر ESC
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                closeImageModal();
+            }
+        });
     </script>
 
-    
+
 </body>
 
 </html>
-
-
-
-
