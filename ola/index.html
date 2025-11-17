@@ -10,8 +10,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .logo-container {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,6 +37,70 @@
         #backToTop.hidden {
             opacity: 0;
             visibility: hidden;
+        }
+        
+        /* تحسينات الجوال */
+        @media (max-width: 768px) {
+            .logo-container {
+                width: 40px;
+                height: 40px;
+            }
+            
+            /* تصغير حجم النصوص في الجوال */
+            h1 {
+                font-size: 1.25rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.125rem !important;
+            }
+            
+            /* تحسين الجدول في الجوال */
+            table {
+                font-size: 0.875rem;
+            }
+            
+            td {
+                padding: 0.5rem !important;
+            }
+            
+            /* تصغير الصور في الجوال */
+            .goal-image {
+                max-height: 300px !important;
+            }
+            
+            /* تحسين زر العودة للأعلى */
+            #backToTop {
+                bottom: 1rem !important;
+                left: 1rem !important;
+                padding: 0.75rem !important;
+            }
+            
+            /* تحسين النافذة المنبثقة للصور */
+            #imageModal img {
+                max-width: 95vw !important;
+                max-height: 80vh !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            /* تصغير إضافي للشاشات الصغيرة جداً */
+            .logo-container {
+                width: 35px;
+                height: 35px;
+            }
+            
+            h1 {
+                font-size: 1rem !important;
+            }
+            
+            table {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -618,4 +682,5 @@ document.addEventListener("keydown", function(e) {
 
     
 </body>
+
 </html>
