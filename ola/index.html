@@ -92,6 +92,27 @@
                 max-width: 95vw !important;
                 max-height: 80vh !important;
             }
+
+            /* تحسين انيميشن الجدارات */
+            .skill-image-container {
+                transition: all 0.4s ease-in-out;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .skill-image-container.show {
+                max-height: 600px;
+                padding: 1rem;
+                border-top: 2px solid #14b8a6;
+            }
+
+            .skill-arrow {
+                transition: transform 0.3s ease;
+            }
+
+            .skill-arrow.rotate {
+                transform: rotate(180deg);
+            }
         }
 
         @media (max-width: 640px) {
@@ -110,6 +131,26 @@
                 font-size: 0.75rem;
             }
         }
+
+       .skill-image {
+    transition: all 0.3s ease-in-out;
+    transform-origin: top;
+}
+
+.skill-image:not(.hidden) {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 
@@ -129,13 +170,15 @@
             <div class="flex items-center gap-4">
                 <!-- Left Logo - Replace src with your image URL -->
                 <div
-                    class="logo-container bg-white bg-opacity-100 rounded-lg w-40 h-40 flex items-center justify-center">
+                    class="logo-container bg-white bg-opacity-100 rounded-lg w-40 h-60 flex items-center justify-center">
                     <img src="./الشعار بدون خلفية.png" alt="Ministry Logo" class="logo-img w-full h-full object-contain"
                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-3xl\'>🎓</div>'">
                 </div>
                 <div class="text-right">
-                    <h1 class="text-4xl font-bold">وزارة التعليم</h1>
-                    <p class="text-xl text-blue-200">Ministry of Education</p>
+                    <h1 class="text-5xl font-bold">وزارة التعليم</h1>
+                    <p class="text-3xl text-blue-100">مجمع عاتكة بنت عبدالمطلب بالمفارجة</p>
+                    <p class="text-2xl text-blue-100">مديرة المدرسة: رباب علي</p>
+                    <p class="text-2xl text-blue-100">المساعد الادراي: عُلا أحمد</p>
                 </div>
             </div>
 
@@ -210,52 +253,44 @@
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             الاسم</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">أحمد محمد العلي
-                                        </td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">عُلا احمد غرم الله الغامدي</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             المؤهل العلمي</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">بكالوريوس تربية
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b-2 border-blue-300">
-                                        <td
-                                            class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
-                                            تاريخه</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">2015م</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">بكالوريوس دراسات اسلامية </td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             مصدره</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">جامعة الملك سعود
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">جامعة تبوك
                                         </td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             رقم الوظيفة</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">123456</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">٢٠٤٧٩</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             تاريخ التعيين</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">1442/05/15هـ</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">١٤٣٥/٨/٢٠ هـ</td>
                                     </tr>
                                     <tr class="border-b-2 border-blue-300">
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             السجل المدني</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">1234567890</td>
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">1010769725</td>
                                     </tr>
                                     <tr>
                                         <td
                                             class="bg-blue-100 p-4 font-bold text-lg text-blue-900 border-2 border-blue-300">
                                             التدرج الوظيفي</td>
-                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">معلم - معلم ممارس
+                                        <td class="p-4 text-lg text-gray-800 border-2 border-blue-300">مساعد اداري ممارس ثاني
                                         </td>
                                     </tr>
                                 </tbody>
@@ -577,41 +612,43 @@
                 </div>
 
                 <!-- Skills Page -->
-                <div id="skillsPage" class="page-content hidden">
-                    <h2 class="text-3xl font-bold text-teal-900 mb-6">المهارات</h2>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">التفكير النقدي</h3>
-                            <p class="text-gray-700">تطوير القدرة على التحليل والتقييم</p>
-                        </div>
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">الإبداع والابتكار</h3>
-                            <p class="text-gray-700">تشجيع الأفكار الجديدة والحلول المبتكرة</p>
-                        </div>
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">التواصل الفعال</h3>
-                            <p class="text-gray-700">مهارات الحوار والعرض والكتابة</p>
-                        </div>
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">العمل الجماعي</h3>
-                            <p class="text-gray-700">التعاون والتنسيق مع الآخرين</p>
-                        </div>
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">القيادة</h3>
-                            <p class="text-gray-700">تنمية مهارات القيادة والمسؤولية</p>
-                        </div>
-                        <div
-                            class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-teal-600">
-                            <h3 class="text-xl font-bold text-teal-900 mb-3">التفكير الحسابي</h3>
-                            <p class="text-gray-700">حل المشكلات باستخدام التقنية</p>
-                        </div>
-                    </div>
-                </div>
+<div id="skillsPage" class="page-content hidden">
+    <h2  class="text-3xl font-bold text-white mb-6">الجدارات</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <div style="border-color: #3078a6;"  class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8  cursor-pointer"
+            onclick="toggleImage(this)">
+            <h3 style=" color:#3078a6;" class="text-xl font-bold text-teal-900 mb-3">حس المسؤولية</h3>
+            <p class="text-gray-700">تلتزم الموظفة بإنجاز مهامها بدقة وفي الوقت المحدد، وتُظهر حسّ مسؤولية عالٍ في متابعة أعمالها وتطبيق التعليمات دون حاجة للمتابعة المستمرة</p>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./شواهد الهدف الاول.jpg" alt="التفكير النقدي" class="rounded-lg w-full">
+            </div>
+        </div>
+        <div style="border-color: #3078a6;"  class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8  cursor-pointer"
+            onclick="toggleImage(this)">
+            <h3 style=" color:#3078a6;" class="text-xl font-bold text-teal-900 mb-3">العمل الجماعي</h3>
+            <p class="text-gray-700">تتعاون الموظفة بفاعلية مع فريق العمل، وتسهم في إنجاز المهام بسلاسة، وتدعم زميلاتها بروح إيجابية لتحقيق أهداف المدرسة</p>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./شواهد الهدف الاول.jpg" alt="التفكير النقدي" class="rounded-lg w-full">
+            </div>
+        </div>
+       <div style="border-color: #3078a6;"  class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8  cursor-pointer"
+            onclick="toggleImage(this)">
+            <h3 style=" color:#3078a6;" class="text-xl font-bold text-teal-900 mb-3">المرونة للتغيير</h3>
+            <p class="text-gray-700">ُتظهر الموظفة مرونة عالية في التكيف مع التغييرات، وتتعامل بإيجابية مع المهام المستجدة والتعليمات الحديثة بما يضمن استمرارية العمل بكفاءة</p>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./path-to-image.jpg" alt="التواصل الفعال" class="rounded-lg w-full">
+            </div>
+        </div>
+        <div style="border-color: #3078a6;"  class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8  cursor-pointer"
+            onclick="toggleImage(this)">
+            <h3 style=" color:#3078a6;" class="text-xl font-bold text-teal-900 mb-3">المبادرة</h3>
+            <p class="text-gray-700">القدرة على إظهار الحرص الكافي لتحقيق أهداف العمل والرغبة في إنجاز مهام إضافية تخدم مصلحة العمل دون أن يُطلب منها ذلك، وتقديم أفكار ومقترحات جديدة نابعة من الرغبة في التحسين والتطوير</p>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./path-to-image.jpg" alt="التواصل الفعال" class="rounded-lg w-full">
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </main>
     </div>
@@ -648,6 +685,26 @@
 
 
     <script>
+
+        function toggleImage(card) {
+    // Find the image container within the clicked card
+    const image = card.querySelector('.skill-image');
+    
+    // Close all other images first
+    const allImages = document.querySelectorAll('.skill-image');
+    allImages.forEach(img => {
+        if (img !== image) {
+            img.classList.add('hidden');
+        }
+    });
+    
+    // Toggle the clicked card's image
+    image.classList.toggle('hidden');
+}
+
+
+
+
         function toggleMenu() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
@@ -732,4 +789,3 @@
 </body>
 
 </html>
-
