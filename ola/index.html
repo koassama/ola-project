@@ -191,6 +191,9 @@
             max-width: 100%;
             height: auto;
         }
+        .rotate-180 {
+    transform: rotate(180deg);
+}
     </style>
 </head>
 
@@ -281,7 +284,8 @@
                         <!-- Decorative Floral Corners -->
                         <div class="absolute top-2 left-2 text-4xl lg:text-6xl opacity-30">🌸</div>
                         <div class="absolute top-2 right-2 text-4xl lg:text-6xl opacity-30">🌼</div>
-                        
+                        <div class="absolute bottom-2 left-2 text-4xl lg:text-6xl opacity-30">🌺</div>
+                        <div class="absolute bottom-2 right-2 text-4xl lg:text-6xl opacity-30">🌻</div>
 
                         <!-- CV Content -->
                         <div class="relative z-10 responsive-table">
@@ -650,43 +654,86 @@
                 </div>
 
                 <!-- Skills Page -->
-                <div id="skillsPage" class="page-content hidden">
-                    <h2 class="text-2xl lg:text-3xl font-bold text-white mb-6">الجدارات</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-                        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer"
-                            onclick="toggleImage(this)">
-                            <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">حس المسؤولية</h3>
-                            <p class="text-gray-700 text-sm lg:text-base">تلتزم الموظفة بإنجاز مهامها بدقة وفي الوقت المحدد، وتُظهر حسّ مسؤولية عالٍ في متابعة أعمالها وتطبيق التعليمات دون حاجة للمتابعة المستمرة</p>
-                            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
-                                <img src="./شواهد الهدف الاول.jpg" alt="التفكير النقدي" class="rounded-lg w-full">
-                            </div>
-                        </div>
-                        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer"
-                            onclick="toggleImage(this)">
-                            <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">العمل الجماعي</h3>
-                            <p class="text-gray-700 text-sm lg:text-base">تتعاون الموظفة بفاعلية مع فريق العمل، وتسهم في إنجاز المهام بسلاسة، وتدعم زميلاتها بروح إيجابية لتحقيق أهداف المدرسة</p>
-                            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
-                                <img src="./شواهد الهدف الاول.jpg" alt="التفكير النقدي" class="rounded-lg w-full">
-                            </div>
-                        </div>
-                        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer"
-                            onclick="toggleImage(this)">
-                            <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">المرونة للتغيير</h3>
-                            <p class="text-gray-700 text-sm lg:text-base">ُتظهر الموظفة مرونة عالية في التكيف مع التغييرات، وتتعامل بإيجابية مع المهام المستجدة والتعليمات الحديثة بما يضمن استمرارية العمل بكفاءة</p>
-                            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
-                                <img src="./path-to-image.jpg" alt="التواصل الفعال" class="rounded-lg w-full">
-                            </div>
-                        </div>
-                        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer"
-                            onclick="toggleImage(this)">
-                            <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">المبادرة</h3>
-                            <p class="text-gray-700 text-sm lg:text-base">القدرة على إظهار الحرص الكافي لتحقيق أهداف العمل والرغبة في إنجاز مهام إضافية تخدم مصلحة العمل دون أن يُطلب منها ذلك، وتقديم أفكار ومقترحات جديدة نابعة من الرغبة في التحسين والتطوير</p>
-                            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
-                                <img src="./path-to-image.jpg" alt="التواصل الفعال" class="rounded-lg w-full">
-                            </div>
-                        </div>
-                    </div>
+<div id="skillsPage" class="page-content hidden">
+    <h2 class="text-2xl lg:text-3xl font-bold text-white mb-6">الجدارات</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer relative"
+            onclick="toggleImage(this)">
+            <div class="flex justify-between items-start">
+                <div class="flex-1">
+                    <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">حس المسؤولية</h3>
+                    <p class="text-gray-700 text-sm lg:text-base">تلتزم الموظفة بإنجاز مهامها بدقة وفي الوقت المحدد، وتُظهر حسّ مسؤولية عالٍ في متابعة أعمالها وتطبيق التعليمات دون حاجة للمتابعة المستمرة</p>
                 </div>
+                <!-- Arrow Indicator -->
+                <div class="skill-arrow ml-3 mt-1 transform transition-transform duration-300">
+                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./شواهد الهدف الاول.jpg" alt="حس المسؤولية" class="rounded-lg w-full">
+            </div>
+        </div>
+        
+        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer relative"
+            onclick="toggleImage(this)">
+            <div class="flex justify-between items-start">
+                <div class="flex-1">
+                    <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">العمل الجماعي</h3>
+                    <p class="text-gray-700 text-sm lg:text-base">تتعاون الموظفة بفاعلية مع فريق العمل، وتسهم في إنجاز المهام بسلاسة، وتدعم زميلاتها بروح إيجابية لتحقيق أهداف المدرسة</p>
+                </div>
+                <!-- Arrow Indicator -->
+                <div class="skill-arrow ml-3 mt-1 transform transition-transform duration-300">
+                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./شواهد الهدف الاول.jpg" alt="العمل الجماعي" class="rounded-lg w-full">
+            </div>
+        </div>
+        
+        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer relative"
+            onclick="toggleImage(this)">
+            <div class="flex justify-between items-start">
+                <div class="flex-1">
+                    <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">المرونة للتغيير</h3>
+                    <p class="text-gray-700 text-sm lg:text-base">ُتظهر الموظفة مرونة عالية في التكيف مع التغييرات، وتتعامل بإيجابية مع المهام المستجدة والتعليمات الحديثة بما يضمن استمرارية العمل بكفاءة</p>
+                </div>
+                <!-- Arrow Indicator -->
+                <div class="skill-arrow ml-3 mt-1 transform transition-transform duration-300">
+                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./path-to-image.jpg" alt="المرونة للتغيير" class="rounded-lg w-full">
+            </div>
+        </div>
+        
+        <div style="border-color: #3078a6;" class="skill-card bg-gradient-to-br from-teal-50 to-cyan-50 p-4 lg:p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-8 cursor-pointer relative"
+            onclick="toggleImage(this)">
+            <div class="flex justify-between items-start">
+                <div class="flex-1">
+                    <h3 style=" color:#3078a6;" class="text-lg lg:text-xl font-bold text-teal-900 mb-3">المبادرة</h3>
+                    <p class="text-gray-700 text-sm lg:text-base">القدرة على إظهار الحرص الكافي لتحقيق أهداف العمل والرغبة في إنجاز مهام إضافية تخدم مصلحة العمل دون أن يُطلب منها ذلك، وتقديم أفكار ومقترحات جديدة نابعة من الرغبة في التحسين والتطوير</p>
+                </div>
+                <!-- Arrow Indicator -->
+                <div class="skill-arrow ml-3 mt-1 transform transition-transform duration-300">
+                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="skill-image mt-4 hidden cursor-pointer rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white transition-all duration-300 transform">
+                <img src="./path-to-image.jpg" alt="المبادرة" class="rounded-lg w-full">
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </main>
     </div>
@@ -820,7 +867,27 @@
                 sidebar.classList.remove('mobile-nav-open');
             }
         });
+
+        function toggleImage(card) {
+    // Find the image container and arrow within the clicked card
+    const image = card.querySelector('.skill-image');
+    const arrow = card.querySelector('.skill-arrow');
+    
+    // Close all other images and reset their arrows first
+    const allCards = document.querySelectorAll('.skill-card');
+    allCards.forEach(c => {
+        if (c !== card) {
+            const otherImage = c.querySelector('.skill-image');
+            const otherArrow = c.querySelector('.skill-arrow');
+            otherImage.classList.add('hidden');
+            otherArrow.classList.remove('rotate-180');
+        }
+    });
+    
+    // Toggle the clicked card's image and rotate arrow
+    image.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+}
     </script>
 </body>
 </html>
-
